@@ -11,6 +11,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <sonar.coverage.exclusions>**/*Exception.*</sonar.coverage.exclusions>
+    <sonar.host.url>https://sonarqube.com</sonar.host.url>
   </properties>
 
   <dependencies>
@@ -45,6 +47,7 @@
         <version>0.7.9</version>
         <executions>
           <execution>
+            <id>agent</id>
             <goals>
               <goal>prepare-agent</goal>
             </goals>
