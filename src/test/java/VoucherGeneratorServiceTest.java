@@ -22,7 +22,19 @@ public class VoucherGeneratorServiceTest {
     double voucherValue = voucherGeneratorService.generateVoucher(orderTotal);
 
     //then
-    assertEquals("Voucher value should be 5", voucherValue, 3.75, 0.01);
+    assertEquals("Voucher value should be 3.75", voucherValue, 3.75, 0.01);
+  }
+
+  @Test
+  public void largeOrdersShouldGenerateTenPercentVoucher() {
+    //given
+    double orderTotal = 175;
+
+    //when
+    double voucherValue = voucherGeneratorService.generateVoucher(orderTotal);
+
+    //then
+    assertEquals("Voucher value should be 17.5", voucherValue, 17.5, 0.01);
   }
 
 }
