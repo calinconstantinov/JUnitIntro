@@ -25,7 +25,7 @@ public class ClientLoyaltyLevelServiceTest {
     boolean isGoldMember = clientLoyaltyLevelService.isGoldMember(joinDate);
 
     //then
-    assertTrue("Old client shoud have Gold Level Status", isGoldMember);
+    assertTrue("Old client should have Gold Level Status", isGoldMember);
   }
 
   @Test
