@@ -8,9 +8,6 @@ public class OrderServiceTest {
 
   private OrderService orderService;
 
-  @Rule
-  public ExpectedException thrown = ExpectedException.none();
-
   @Before
   public void setUp() {
     orderService = new OrderService();
